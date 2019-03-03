@@ -1,0 +1,16 @@
+version: "3"
+services:
+
+  mariadb:
+    container_name: domjudge-mariadb
+    image: mariadb:latest
+    env_file: mysql.env
+    restart: always
+
+  domserver:
+    container_name: domjudge-domserver
+    image: domjudge/domserver:latest
+    env_file: mysql.env
+    ports:
+      - "80:80"
+    restart: always
