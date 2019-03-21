@@ -1,8 +1,0 @@
-version: "3"
-services:
-
-  judgehost:
-    container_name: domjudge-judgehost
-    image: domjudge/judgehost:latest
-    env_file: judgehost.env
-    restart: always
